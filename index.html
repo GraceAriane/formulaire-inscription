@@ -9,16 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <script type="module" src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
         <img src="mains.png" alt="">
         <div class="form">
-            <div class="connexion">
-                <a href="">Se connecter</a>
-                <a href="">S'inscrire</a>
+            <div class="navbar-connexion-inscription">
+                <a href="" class="action-connexion">Se connecter</a>
+                <a href="" class="action-inscription cursor">S'inscrire</a>
             </div>
-            <div class="elements">
+            <div class="elements inscription">
                 <div>
                     <i class="fa-solid fa-user-plus icon-visible"></i>
                     <input type="text" placeholder="Nom d'utilisateur">
@@ -38,16 +40,43 @@
                 <div class="passeword">
                     <i class="fa-solid fa-key icon-visible"></i>
                     <input type="password" placeholder="Mot de passe">
+                    <!-- <div class="eyes">
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </div> -->
+                </div>
+                <div class="button-inscription">
+                    <a href="">S'INSCRIRE</a>
+                </div>
+            </div>
+
+            <div class="elements connexion">
+                <div>
+                    <i class="fa-solid fa-user-plus icon-visible"></i>
+                    <input type="text" placeholder="Nom d'utilisateur">
+                </div>
+                <div class="passeword">
+                    <i class="fa-solid fa-key icon-visible"></i>
+                    <input type="password" placeholder="Mot de passe">
                     <div class="eyes" style="display: none;">
                         <i class="fa-solid fa-eye"></i>
                         <i class="fa-solid fa-eye-slash"></i>
                     </div>
                 </div>
-                
+                <div class="option-remember-forgot">
+                    <div class="remember">
+                        <input type="checkbox" name="souvenir" id="souvenir">
+                        <label for="souvenir">Se souvenir de moi</label>
+                    </div>
+                    <div class="forgot">
+                        <a href="">Mot de passe oublié ?</a>
+                    </div>
+                </div>
+                <div class="button-inscription">
+                    <a href="">SIGN IN</a>
+                </div>
             </div>
-            <div class="inscription">
-                <a href="">S'INSCRIRE</a>
-            </div>
+
         </div>
     </div>
 </body>

@@ -8,7 +8,7 @@ body{
     height: 100vh;
     display: flex;
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .container{
     display: flex;
@@ -28,7 +28,7 @@ body{
     padding: 15px 0px;
     background-color: rgb(247,247,247);
 }
-.form .connexion,.form .elements,.form .inscription{
+.form .navbar-connexion-inscription,.form .elements{
     width: 87%;
     margin: 5px auto;
 }
@@ -37,25 +37,21 @@ body{
     flex-direction: column;
     gap: 30px;
 }
-
-.elements input{
+.elements input[placeholder]{
     width: 100%;
     height: 49px;
     padding: 8px;
-    border: solid rgb(204,204,204) 1px;
+    border: solid rgb(204,204,204) 1.2px;
     outline: none;
     border-radius: 0px 5px 5px 0px;
+    font-family: 'Montserrat', sans-serif;
 }
-.elements input:focus{
+.inscription input:focus{
     background-color: rgb(238,238,238);
 }
-/* .password{
-    position: relative;
+.password .eyes{
+    display: none;
 }
-.password .eyes i{
-    position: absolute;
-    left: -10px;
-} */
 .elements input::placeholder{
     font-family: 'Montserrat', sans-serif;
 }
@@ -75,28 +71,31 @@ body{
 a{
     text-decoration: none;
 }
-.connexion{
+.navbar-connexion-inscription{
     display: flex;
 }
-.connexion a{
+.navbar-connexion-inscription a{
     padding: 15px;
     width: 50%;
     text-align: center;
 }
-.connexion a:first-child{
+.navbar-connexion-inscription .action-connexion{
     background-color: #c4c4c4;
     color: rgb(21,25,21);
     background-color:  rgb(224,224,224);
 }
-.connexion a:last-child{
+.navbar-connexion-inscription .action-inscription{
     background-color: rgb(30, 115, 190);
     color: white;
     font-weight: 700;
 }
-.inscription{
+.cursor{
+    cursor: default;
+}
+.button-inscription{
     border-radius: 20px;
     text-align: center;
-    height: 60px;
+    height: 45px;
     padding: 5px;
     display: flex;
     align-items: center;
@@ -104,7 +103,32 @@ a{
     justify-content: center;
     background: linear-gradient(to right,rgb(127,183,242),rgb(31,107,207));
 }
-.inscription a{
+.button-inscription a{
     color: white;
     font-weight: 600;
+}
+.connexion{
+    visibility: hidden;
+}
+.visible-contain{
+    display: block;
+}
+.hidden-contain{
+    display: none;
+}
+.connexion .option-remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(21,25,21);
+    font-size: 15px;
+}
+.connexion .forgot a{
+    color: rgb(21,25,21);
+}
+.remember input{
+    margin-right: 5px;
+}
+.connexion input:focus{
+    background-color: rgb(232,240,254);
+    
 }
