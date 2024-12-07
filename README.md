@@ -65,4 +65,4 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [GraceAriane](https://www.frontendmentor.io/profile/GraceAriane)
-- linkedIn - [Grace Ariane Tchoukeu](https://www.linkedin.com/in/grace-ariane-tchoukeu-a290b022a)
+- linkedIn - [Grace Ariane Tchoukeu](https://www.linkedin.com/in/grace-ariane-tchoukeu)
