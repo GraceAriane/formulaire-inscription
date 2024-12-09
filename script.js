@@ -53,9 +53,23 @@ buttoninscription.addEventListener('click',(e)=>{
     e.preventDefault()
 })
 
-// const connexionInputs = document.querySelectorAll(".connexion input")
-// connexionInputs.addEventListener('input',(input)=>{
-//     if(input.value.length>1){
-//         input.style.backgroundColor="rgb(232,240,254);"
-//     }
-// })
+const eye = document.querySelector(".fa-eye")
+const eyeslash = document.querySelector(".fa-eye-slash")
+const inputpassword = document.querySelector(".password input")
+
+eye.addEventListener('click',()=>{
+    eye.style.display="none"
+    eyeslash.style.display="block"
+    if(inputpassword.getAttribute("type")==="password"){
+        inputpassword.setAttribute("type","text")
+    }
+    
+})
+eyeslash.addEventListener('click',()=>{
+    eye.style.display="block"
+    eyeslash.style.display="none"
+    if(inputpassword.getAttribute("type")==="text"){
+        inputpassword.setAttribute("type","password")
+    }
+
+})
