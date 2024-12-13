@@ -7,7 +7,7 @@ buttonconnexion.addEventListener('click',(e)=>{
     const connexion = document.querySelector(".connexion")
 
     inscription.style.display="none"
-    connexion.style.visibility="visible"
+    connexion.style.display="flex"
 
     buttonconnexion.style.cssText=`
         background-color: rgb(30, 115, 190);
@@ -33,7 +33,7 @@ buttoninscription.addEventListener('click',(e)=>{
     const connexion = document.querySelector(".connexion")
 
     inscription.style.display="flex"
-    connexion.style.visibility="hidden"
+    connexion.style.display="none"
 
     buttoninscription.style.cssText=`
         background-color: rgb(30, 115, 190);
@@ -53,9 +53,9 @@ buttoninscription.addEventListener('click',(e)=>{
     e.preventDefault()
 })
 
-const eye = document.querySelector(".fa-eye")
-const eyeslash = document.querySelector(".fa-eye-slash")
-const inputpassword = document.querySelector(".password input")
+const eye = document.querySelector(".password-inscription .fa-eye")
+const eyeslash = document.querySelector(".password-inscription .fa-eye-slash")
+const inputpassword = document.querySelector(".password-inscription input")
 
 eye.addEventListener('click',()=>{
     eye.style.display="none"
@@ -70,6 +70,27 @@ eyeslash.addEventListener('click',()=>{
     eyeslash.style.display="none"
     if(inputpassword.getAttribute("type")==="text"){
         inputpassword.setAttribute("type","password")
+    }
+
+})
+
+const eye2 = document.querySelector(".password-connexion .fa-eye")
+const eyeslash2 = document.querySelector(".password-connexion .fa-eye-slash")
+const inputpassword2 = document.querySelector(".password-connexion input")
+
+eye2.addEventListener('click',()=>{
+    eye2.style.display="none"
+    eyeslash2.style.display="block"
+    if(inputpassword2.getAttribute("type")==="password"){
+        inputpassword2.setAttribute("type","text")
+    }
+    
+})
+eyeslash2.addEventListener('click',()=>{
+    eye2.style.display="block"
+    eyeslash2.style.display="none"
+    if(inputpassword2.getAttribute("type")==="text"){
+        inputpassword2.setAttribute("type","password")
     }
 
 })
